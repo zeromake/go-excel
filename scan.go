@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"reflect"
 
-	"github.com/szyhf/go-convert"
+	"github.com/szyhf/go-excel/pkg/convert"
 )
 
 // ref: gopkg.in/redis.v5

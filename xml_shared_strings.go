@@ -4,7 +4,7 @@ import (
 	"encoding/xml"
 	"io"
 
-	"github.com/szyhf/go-convert"
+	"github.com/szyhf/go-excel/pkg/convert"
 )
 
 func readSharedStringsXML(rc io.ReadCloser) []string {

@@ -5,8 +5,8 @@ import (
 	"reflect"
 	"testing"
 
-	convert "github.com/szyhf/go-convert"
 	excel "github.com/szyhf/go-excel"
+	convert "github.com/szyhf/go-excel/pkg/convert"
 )
 
 type StandardFieldConfig Standard
