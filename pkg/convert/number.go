@@ -1003,7 +1003,7 @@ func ToUint64(value interface{}) (res uint64, err error) {
 		}
 	case uint64:
 		{
-			res = uint64(value.(uint64))
+			res = value.(uint64)
 		}
 	case uintptr:
 		{
@@ -1115,11 +1115,11 @@ func ToFloat32(value interface{}) (res float32, err error) {
 
 	case float32:
 		{
-			res = float32(math.Round(float64(value.(float32))))
+			res = value.(float32)
 		}
 	case float64:
 		{
-			res = float32(math.Round(value.(float64)))
+			res = float32(value.(float64))
 		}
 	case bool:
 		{
@@ -1218,11 +1218,11 @@ func ToFloat64(value interface{}) (res float64, err error) {
 
 	case float32:
 		{
-			res = math.Round(float64(value.(float32)))
+			res = float64(value.(float32))
 		}
 	case float64:
 		{
-			res = math.Round(value.(float64))
+			res = value.(float64)
 		}
 	case bool:
 		{
