@@ -6,10 +6,6 @@ import (
 	"strconv"
 )
 
-func toRound(x float64) float64 {
-	return math.Floor(x + 0/5)
-}
-
 // 尽最大努力将一个值转为int类型的数据
 // string会按顺序尝试将数据解析为int64\uint64\float64\bool，然后再转换为int
 // float会抹去小数
@@ -90,11 +86,11 @@ func ToInt(value interface{}) (res int, err error) {
 
 	case float32:
 		{
-			res = int(toRound(float64(value.(float32))))
+			res = int(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = int(toRound(value.(float64)))
+			res = int(math.Round(value.(float64)))
 		}
 
 	case bool:
@@ -194,11 +190,11 @@ func ToInt8(value interface{}) (res int8, err error) {
 
 	case float32:
 		{
-			res = int8(toRound(float64(value.(float32))))
+			res = int8(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = int8(toRound(value.(float64)))
+			res = int8(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -297,11 +293,11 @@ func ToInt16(value interface{}) (res int16, err error) {
 
 	case float32:
 		{
-			res = int16(toRound(float64(value.(float32))))
+			res = int16(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = int16(toRound(value.(float64)))
+			res = int16(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -402,11 +398,11 @@ func ToInt32(value interface{}) (res int32, err error) {
 
 	case float32:
 		{
-			res = int32(toRound(float64(value.(float32))))
+			res = int32(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = int32(toRound(value.(float64)))
+			res = int32(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -501,11 +497,11 @@ func ToInt64(value interface{}) (res int64, err error) {
 
 	case float32:
 		{
-			res = int64(toRound(float64(value.(float32))))
+			res = int64(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = int64(toRound(value.(float64)))
+			res = int64(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -604,11 +600,11 @@ func ToUint(value interface{}) (res uint, err error) {
 
 	case float32:
 		{
-			res = uint(toRound(float64(value.(float32))))
+			res = uint(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = uint(toRound(value.(float64)))
+			res = uint(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -707,11 +703,11 @@ func ToUint8(value interface{}) (res uint8, err error) {
 
 	case float32:
 		{
-			res = uint8(toRound(float64(value.(float32))))
+			res = uint8(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = uint8(toRound(value.(float64)))
+			res = uint8(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -810,11 +806,11 @@ func ToUint16(value interface{}) (res uint16, err error) {
 
 	case float32:
 		{
-			res = uint16(toRound(float64(value.(float32))))
+			res = uint16(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = uint16(toRound(value.(float64)))
+			res = uint16(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -913,11 +909,11 @@ func ToUint32(value interface{}) (res uint32, err error) {
 
 	case float32:
 		{
-			res = uint32(toRound(float64(value.(float32))))
+			res = uint32(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = uint32(toRound(value.(float64)))
+			res = uint32(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -1016,11 +1012,11 @@ func ToUint64(value interface{}) (res uint64, err error) {
 
 	case float32:
 		{
-			res = uint64(toRound(float64(value.(float32))))
+			res = uint64(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = uint64(toRound(value.(float64)))
+			res = uint64(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -1119,11 +1115,11 @@ func ToFloat32(value interface{}) (res float32, err error) {
 
 	case float32:
 		{
-			res = float32(toRound(float64(value.(float32))))
+			res = float32(math.Round(float64(value.(float32))))
 		}
 	case float64:
 		{
-			res = float32(toRound(value.(float64)))
+			res = float32(math.Round(value.(float64)))
 		}
 	case bool:
 		{
@@ -1222,11 +1218,11 @@ func ToFloat64(value interface{}) (res float64, err error) {
 
 	case float32:
 		{
-			res = toRound(float64(value.(float32)))
+			res = math.Round(float64(value.(float32)))
 		}
 	case float64:
 		{
-			res = toRound(value.(float64))
+			res = math.Round(value.(float64))
 		}
 	case bool:
 		{
